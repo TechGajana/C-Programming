@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en-US">
+
+
+<!--HEAD 
+----------------------------------------------------------------------------------------------------------------->
+ <head>
+	<meta charset="utf-8">
+	<title>C Programming</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="D:\New folder (3)\Computer Science\Hacker's Languages\HTML\WebTry1\styles.css">
+ </head>
+
+
+<!--BODY 
+-----------------------------------------------------------------------------------------------------------------> 
+ <body>
+	<!--main
+		header
+		footer
+		article
+		section
+		aside-->
+		
+		
+		
+<!--PREFACE 
+----------------------------------------------------------------------------------------------------------------->	
+	<header>
+		<h1>C Programming Tutorial</h1>
+	</header>
+
+	<article>
+		<div class="preface" contenteditable="true">
+			<h2>Before we start</h2>
+			This is an article about the C Programming Language
+		
+		</div>
+	
+		<div class="TOC">
+			<h2 id="TOC">Table Of Content...</h2>
+				<ol>
+					<li><a href="#intro">Introduction to C Programming...</a></li>
+					<li><a href="#structure">Structure of C language...</a></li>
+					<li><a href="#tokens">C-Tokens...</a></li>
+					<li><a href="#datatypes">Data types...</a></li>
+					<li><a href="#control">Control strings...</a></li>
+					<li><a href="#escape">Escape Sequnces...</a></li>
+					<li><a href="#iof">I/O funtions...</a></li>
+					<li><a href="#control_str">Control Structures...</a></li>
+					<li><a href="#arrays">Arrays...</a></li>
+					<li><a href="#functions">Funtions...</a></li>
+					<li><a href="#storage">Storge class...</a></li>
+					<li><a href="#strings">Strings...</a></li>
+					<li><a href="#typedef">Typedef...</a></li>
+					<li><a href="#structures">Structures...</a></li>
+					<li><a href="#union">Union...</a></li>
+					<li><a href="#pointers">Pointers...</a></li>
+					<li><a href="#files">Files...</a></li>
+				</ol>
+		</div>
+	</article>
+	
+	
+	
+<!--INTRODUCTION 
+----------------------------------------------------------------------------------------------------------------->
+	<section id="intro">
+		<h3>Introduction To C Programming</h3>
+		<p>
+			C is a general-purpose computer programming language. 
+			It was created in the 1970s by Dennis Ritchie, and remains very widely used and influential. 
+			By design, C's features cleanly reflect the capabilities of the targeted CPUs. 
+			It has found lasting use in operating systems, device drivers, protocol stacks, though decreasingly for application software. 
+			C is commonly used on computer architectures that range from the largest supercomputers to the smallest microcontrollers and embedded systems.
+		</p>
+		<p>
+			A successor to the programming language B, C was originally developed at Bell Labs by Ritchie between 1972 and 1973 to construct utilities running on Unix. 
+			It was applied to re-implementing the kernel of the Unix operating system.
+			During the 1980s, C gradually gained popularity. 
+			It has become one of the most widely used programming languages, with C compilers available for practically all modern computer architectures and operating systems. 
+			The book The C Programming Language, co-authored by the original language designer, served for many years as the de facto standard for the language. 
+			C has been standardized by ANSI since 1989 (ANSI C) and by the International Organization for Standardization (ISO).
+		</p>
+		<p>
+			C is an imperative procedural language, supporting structured programming, lexical variable scope and recursion, with a static type system. 
+			It was designed to be compiled to provide low-level access to memory and language constructs that map efficiently to machine instructions, all with minimal runtime support. 
+			Despite its low-level capabilities, the language was designed to encourage cross-platform programming. 
+			A standards-compliant C program written with portability in mind can be compiled for a wide variety of computer platforms and operating systems with few changes to its source code.
+		</p>
+		<p>
+			Since 2000, C has consistently ranked among the top two languages in the TIOBE index, a measure of the popularity of programming languages. 
+			<a href="#TOC"><footer>Return to TOC</footer></a>
+		</p>
+		
+	</section>
+	
+	
+	
+	
+	
+<!--STRUCTURE OF C PROGRAMMING 
+----------------------------------------------------------------------------------------------------------------->
+	<section id="structure">
+		<h3>Structure Of C Language</h3>
+		<p>
+			To conclude, the structure of a C program can be divided into six sections, namely - Documentation, Link, Definition, Global Declaration, main() Function, and Subprograms. 
+			The main() function is compulsory to include in every C program, whereas the rest are optional.
+			<pre>
+				#include&lt;header file&gt;
+				#define MACROS ...
+				Global Declaration
+				void main()
+				{
+					Variable Declaration 
+					
+					Statements...
+				}
+			</pre>
+			<a href="#TOC"><footer>Return to TOC</footer></a>
+		</p>
+		
+	</section>
+	
+
+
+
+
+<!--TOKENS 
+----------------------------------------------------------------------------------------------------------------->
+	<section id="tokens">
+		<h3 id="Tkns">C-Tokens</h3>
+		<section>
+			<div>
+				Every statement line of the C Programming Language is made up of small lexical units termed as Tokens.. 
+				Otherwise, Tokens are the building blocks of C.<br/>
+				C Tokens are classified into 5 and C statements contains only these 5 types of units...<br/>
+				They are , <br/>
+				<ol>
+					<li><a href="#keywords">Keywords</a></li>
+					<li><a href="#identifiers">Identifiers</a></li>
+					<li><a href="#operators">Operators</a></li>
+					<li><a href="#literals">Literals</a></li>
+					<li><a href="#delimiters">Delimiters</a></li>
+				</ol>
+			</div>
+		
+<!-------------------------------KEYWORDS-------------------------------->
+			<div>
+				<h4 id="keywords">Keywords</h4>
+				
+				Keywords are the reserved words in C language.(i.e) They contains a specific meaning for the compiler. <br/>They cannot be used for any other purposes. There 32 keywords are available in C Language. <br/>They are,
+				
+				<table class="kw">
+					
+					<tr>
+						<td>auto</td>
+						<td>double</td>
+						<td>int</td>
+						<td>struct</td>
+					</tr>
+					
+					<tr>
+						<td>break</td>
+						<td>else</td>
+						<td>long</td>
+						<td>switch</td>
+					</tr>
+					
+					<tr>
+						<td>case</td>
+						<td>enum</td>
+						<td>register</td>
+						<td>typedef</td>
+					</tr>
+					
+					<tr>
+						<td>char</td>
+						<td>extern</td>
+						<td>return</td>
+						<td>union</td>
+					</tr>
+					
+					<tr>
+						<td>const</td>
+						<td>float</td>
+						<td>short</td>
+						<td>unsigned</td>
+					</tr>
+					
+					<tr>
+						<td>continue</td>
+						<td>for</td>
+						<td>signed</td>
+						<td>void</td>
+					</tr>
+					
+					<tr>
+						<td>default</td>
+						<td>goto</td>
+						<td>sizeof</td>
+						<td>volatile</td>
+					</tr>
+					
+					<tr>
+						<td>do</td>
+						<td>if</td>
+						<td>static</td>
+						<td>while</td>
+					</tr>
+					
+				</table>
+				
+				<a href="#Tkns"><footer>Return to Tokens</footer></a>
+				
+			</div>	
+			
+<!-------------------------------VARIABLES AND IDENTIFIERS-------------------------------->				
+			<div>
+				<h4 id="identifiers">Variables and Identifiers</h4>
+				
+				To perform any Operation we need values first, and the places used to store the values are known as Variables. <br/>(i.e) Variables are the small portion of computer memory. <br/>For Example, 
+				
+				<pre>
+		a = 10;
+		b = 20;
+		c = a+b;
+				</pre>
+				Here, we store 10 & 20 in two variables and named the variables as a & b. <br/>
+				The Identifiers are the names which we give to a variable or function or anyother object. 
+				<aside><h6>Note:</h6>variables and Identifiers are not same. <br/>Variables are the memory portion where we store the values.. and <br/>Identifiers are the names given to the variables which is used to access the variables.</aside>
+				
+				<a href="#Tkns"><footer>Return to Tokens</footer></a>
+				
+			</div>
+			
+<!-------------------------------OPERATORS-------------------------------->
+			<div>
+				<h4 id="operators">Operators</h4>
+				Operators are the special symbols used to perform arithmatic and logical operations... like addition, subtaction , etc,.
+				C supports 8 types of Operators, they are, 
+				
+				<ol>
+					<li><a href="#AO">Assignment Operators</a></li>
+					<li><a href="#RO">Relational Operators</a></li>
+					<li><a href="#LO">Logical Operators</a></li>
+					<li><a href="#ArO">Arithmatic Operators</a></li>
+					<li><a href="#CO">Conditional Operators</a></li>
+					<li><a href="#IDO">Increment or Decrement Operators</a></li>
+					<li><a href="#MO">Special or Misc Operators</a></li>
+					<li><a href="#BO">Bitwise Operators</a></li>
+				</ol>
+				
+				<!---------------------ASSIGNMENT OPERATORS------------------>
+				<div id="AO">
+					<h5>Assignment Operators</h5>
+					=
+				</div>
+				
+				<!---------------------RELATIONAL OPERATORS------------------>
+				<div id="RO">
+					<h5>Relational Operators</h5>
+					&lt;, &gt;, &lt;=, &gt;= != <br/>
+				</div>
+				
+				<!---------------------LOGICAL OPERATORS------------------>
+				<div id="LO">
+					<h5>Logical Operators</h5>
+					&& --&gt; And <br/>
+					|| --&gt; Or <br/>
+					!  --&gt; Not <br/>
+				</div>
+				
+				<!---------------------ARITHMATIC OPERATORS------------------>
+				<div id="ArO">
+					<h5>Arithmatic Operators</h5>
+					
+				</div>
+				
+				<!---------------------CONDDITIONAL OPERATORS------------------>
+				<div id="CO">
+					<h5>Conditional Operators</h5>
+					
+				</div>
+				
+				<!---------------------INCR$MENT OR DECREMENT OPERATORS------------------>
+				<div id="IDO">
+					<h5>Increment And Decrement Operators</h5>
+					
+					++var ---&gt; Pre&nbsp;Increment <br/>
+					var++ ---&gt; Post&nbsp;Increment <br/>
+					
+					--var ---&gt; Pre&nbsp;Decrement <br/>
+					var-- ---&gt; Post&nbsp;Decrement <br/>
+				</div>
+				
+				<!---------------------SPECIAL OR MISC OPERATORS------------------>
+				<div id="MO">
+					<h5>Special Or Misc Operators</h5>
+					
+					.  ---&gt; Stucture Operator <br/>
+					[] ---&gt; Array Operator <br/>
+					() ---&gt; Funtion call <br/>
+					&  ---&gt; Ampersand <br/>
+					*  ---&gt; Pointer Operator <br/>
+					
+				</div>
+				
+				<!---------------------BITWISE OPERATORS------------------>
+				<div id="BO">
+					<h5>Bitwise Operators</h5>
+					
+					&  ---&gt; AND <br/>
+					|  ---&gt; OR <br/>
+					~  ---&gt; NOT <br/>
+					^  ---&gt; Ex-OR <br/>
+					>> ---&gt; Right Shift <br/>
+					>> ---&gt; Left Shift <br/>
+					
+				</div>
+				
+				
+				<a href="#Tkns"><footer>Return to Tokens</footer></a>
+				
+			</div>
+
+<!-------------------------------LITERALS-------------------------------->
+			<div>
+				<h4 id="literals">Literals</h4>
+				
+				
+				<a href="#Tkns"><footer>Return to Tokens</footer></a>
+				
+			</div>
+<!-------------------------------DELIMITERS-------------------------------->
+			<div>
+				<h4 id="delimiters">Delimiters</h4>
+				
+				
+				<a href="#Tkns"><footer>Return to Tokens</footer></a>
+				
+			</div>
+			
+			
+		</section>
+		
+		<a href="#TOC"><footer>Return to TOC</footer></a>
+		
+	</section>
+
+
+
+<!--DATATYPES 
+----------------------------------------------------------------------------------------------------------------->
+	<section id="datatypes">
+		
+		<h3>Data types</h3>
+		
+		<a href="#TOC"><footer>Return to TOC</footer></a>
+		
+	</section>
+
+
+
+<!--CONTROL STRINGS 
+----------------------------------------------------------------------------------------------------------------->
+	<section id="control">
+		
+		<h3>Control strings</h3>
+		
+		<a href="#TOC"><footer>Return to TOC</footer></a>
+		
+	</section>
+
+
+
+<!--ESCAPE SEQUENCES 
+----------------------------------------------------------------------------------------------------------------->
+	<section id="escape">
+		
+		<h3>Escape Sequnces</h3>
+		
+		<a href="#TOC"><footer>Return to TOC</footer></a>
+		
+	</section>
+	
+
+
+
+<!--I/O FUNCTIONS 
+----------------------------------------------------------------------------------------------------------------->
+	<section id="iof">
+		
+		<h3>I/O funtions</h3>
+		
+		<a href="#TOC"><footer>Return to TOC</footer></a>
+		
+	</section>
+
+
+
+<!--CONTROL STRUCTURES 
+----------------------------------------------------------------------------------------------------------------->
+	<section id="control_str">
+		
+		<h3>Control Structures</h3>
+		
+		<a href="#TOC"><footer>Return to TOC</footer></a>
+		
+	</section>
+
+
+
+
+<!--ARRAYS 
+----------------------------------------------------------------------------------------------------------------->
+	<section id="arrays">
+		
+		<h3>Arrays</h3>
+		
+		<a href="#TOC"><footer>Return to TOC</footer></a>
+		
+	</section>
+
+
+
+
+<!--FUNCTIONS 
+----------------------------------------------------------------------------------------------------------------->
+	<section id="functions">
+		
+		<h3>Funtions</h3>
+		
+		<a href="#TOC"><footer>Return to TOC</footer></a>
+		
+	</section>
+
+
+
+
+<!--STORAGE CLASSES 
+----------------------------------------------------------------------------------------------------------------->
+	<section id="storage">
+		
+		<h3>Storge class</h3>
+		
+		<a href="#TOC"><footer>Return to TOC</footer></a>
+		
+	</section>
+
+
+
+
+<!--STRINGS 
+----------------------------------------------------------------------------------------------------------------->
+	<section id="strings">
+		
+		<h3>Strings</h3>
+		
+		<a href="#TOC"><footer>Return to TOC</footer></a>
+		
+	</section>
+
+
+
+
+
+<!--TYPEDEF 
+----------------------------------------------------------------------------------------------------------------->
+	<section id="typedef">
+		
+		<h3>Typedef</h3>
+		
+		<a href="#TOC"><footer>Return to TOC</footer></a>
+		
+	</section>
+
+
+
+
+<!--STRUCTURES 
+----------------------------------------------------------------------------------------------------------------->
+	<section id="structures">
+		
+		<h3>Structures</h3>
+		
+		<a href="#TOC"><footer>Return to TOC</footer></a>
+		
+	</section>
+
+
+
+<!--UNION 
+----------------------------------------------------------------------------------------------------------------->
+	<section id="union">
+		
+		<h3>Union</h3>
+		
+		<a href="#TOC"><footer>Return to TOC</footer></a>
+		
+	</section>
+
+
+
+<!--POINTERS 
+----------------------------------------------------------------------------------------------------------------->
+	<section id="pointers">
+		
+		<h3>Pointers</h3>
+		
+		<a href="#TOC"><footer>Return to TOC</footer></a>
+		
+	</section>
+
+
+
+
+<!--FILES 
+----------------------------------------------------------------------------------------------------------------->
+	<section id="files">
+		
+		<h3>Files</h3>
+		
+		
+		<a href="#TOC"><footer>Return to TOC</footer></a>
+	</section>
+	
+	
+	
+ </body>
+
+</html>
